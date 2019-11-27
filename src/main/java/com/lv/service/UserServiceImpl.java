@@ -38,4 +38,9 @@ public class UserServiceImpl implements UserService {
 		return userDao.getListAll();
 	}
 
+	@Override
+	public long getCountByName(String username) {
+		return userDao.getCountByName(username);
+	}
+
 }

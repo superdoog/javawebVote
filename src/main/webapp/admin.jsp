@@ -23,11 +23,19 @@
                     <input type="submit" value="查看投票情况">
                 </form>
             </td>
+            <td>
+                <form action="<%=request.getContextPath()%>/query.udo" method="post"><input type="submit" value="查询用户"></form>
+            </td>
+            <td>
+                <form action="<%=request.getContextPath()%>/add.jsp" method="post"><input type="submit" value="增加用户"></form>
+            </td>
         </tr>
     </table>
 
     <br>
     <br>
+
+
 
     <table style="margin-left: 100px;padding: 50px;" border="1" cellpadding="0" cellspacing="0">
         <tr>
@@ -43,7 +51,6 @@
             if (list != null && list.size()>0){
             	for (User user:list){
         %>
-
         <tr>
             <td><%=user.getId()%></td>
             <td><%=user.getUsername()%></td>

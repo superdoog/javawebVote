@@ -51,13 +51,13 @@ public interface UserDao {
 	 */
 	public List<User> getListAll();
 
+
+
 	/**
-	 * Dao层里实现模糊查询
+	 * 查询指定用户名的用户有多少条
 	 *
 	 * @param username
-	 * @param address
-	 * @param phoneNo
 	 * @return
 	 */
-	List<User> query(String username, String address, String phoneNo);
+	public long getCountByName(String username);
 }

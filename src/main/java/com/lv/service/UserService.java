@@ -49,4 +49,11 @@ public interface UserService {
 	 */
 	List<User> getListAll();
 
+	/**
+	 * 查询指定用户名的用户有多少条
+	 *
+	 * @param username
+	 * @return
+	 */
+	long  getCountByName(String username);
 }
