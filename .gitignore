@@ -12,4 +12,4 @@ Release/
 obj/  
 target/
 resources/
-idea/
+.idea/
