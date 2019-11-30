@@ -1,7 +1,8 @@
 package com.lv.controller;
 
+
 import com.lv.model.User;
-import com.lv.service.FactoryService;
+import com.lv.service.FactoryUserService;
 import com.lv.service.UserService;
 
 import javax.servlet.ServletException;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public class UserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UserService userService = FactoryService.getUserService();
+	private UserService userService = FactoryUserService.getUserService();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -116,8 +117,6 @@ public class UserController extends HttpServlet {
 		oldUser.setPasword(req.getParameter("pasword"));
 		oldUser.setQualification(Boolean.parseBoolean(req.getParameter("qualification")));
 
-		System.out.println(oldUser);
-
 		int rows = userService.updateUserById(oldUser);
 		if (rows > 0) {
 			resp.sendRedirect(req.getContextPath() + "/query.udo");
@@ -161,12 +160,6 @@ public class UserController extends HttpServlet {
 
 	}
 
-	private void updateVote(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-	}
-
-	private void viewVote(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-	}
 
 }

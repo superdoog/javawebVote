@@ -10,16 +10,16 @@ public class Vote {
 	/**
 	 * 投票人数
 	 */
-	private int option;
+	private int sum;
 
 	/**
 	 * 投票信息
 	 */
 	private int detail;
 
-	public Vote(int id, int option, int detail) {
+	public Vote(int id, int sum, int detail) {
 		this.id = id;
-		this.option = option;
+		this.sum = sum;
 		this.detail = detail;
 	}
 
@@ -34,12 +34,12 @@ public class Vote {
 		this.id = id;
 	}
 
-	public int getOption() {
-		return option;
+	public int getsum() {
+		return sum;
 	}
 
-	public void setOption(int option) {
-		this.option = option;
+	public void setsum(int sum) {
+		this.sum = sum;
 	}
 
 	public int getDetail() {
@@ -54,7 +54,7 @@ public class Vote {
 	public String toString() {
 		return "Vote{" +
 				"id=" + id +
-				", option=" + option +
+				", sum=" + sum +
 				", detail=" + detail +
 				'}';
 	}
